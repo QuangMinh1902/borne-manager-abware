@@ -1,0 +1,12 @@
+{# event/datefiled.html.twig #}
+<div class="dates-diffusion flex flex-col py-2 my-2">
+    <label id="date-event" class="">
+        <span for="{{ datename }}" required="required" class="mt-[20px] block mb-2 text-xl font-medium text-gray-900 ">
+            {{ datelabel }}
+        </span>
+        
+        <input type="date" name="{{ datename }}" value="{{ datevalue|date('Y-m-d') }}" 
+            class="bg-gray-50 text-sm rounded-lg focus:border-blue-500 w-1/2 p-2.5 " />
+    </label> 
+</div>
+    

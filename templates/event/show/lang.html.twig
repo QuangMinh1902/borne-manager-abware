@@ -1,0 +1,16 @@
+{# event/create/head.html.twig #} 
+{% if langSelect is not empty %}
+    <ul id="tabs" class="inline-flex pt-2 px-1 w-full border-b sm:flex-row">
+        {% for lgs in langSelect %}
+            <li class="text-gray-600 py-4 px-6 block font-semibold rounded-t border-t border-r border-l -mb-px hover:text-blue-500 focus:outline-none ">
+                <a href="{{ path('edit_event', {'idCatalog': idCatalog, 'idLang': lgs.idLang}) }}">{{ lgs.code }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+<nav class="flex flex-col sm:flex-row">
+    <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none border-b-2 font-medium border-blue-500">
+        Add New lang
+    </button>
+</nav>
+{% endif %}

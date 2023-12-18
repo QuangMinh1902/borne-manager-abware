@@ -1,0 +1,36 @@
+{# catalog/filterubrics.html.twig #}
+<form id="filterubrics" action ="" class="form flex flex-col items-center justify-center gap-2">
+    <div class="flex flex-col">
+        <label htmlFor="rubrique-video" class="flex font-semibold whitespace-nowrap">
+            Rubriques: 
+        </label>
+        <div class="flex border-2 rounded">
+            <select id="select-category" data-id-lang = "{{idLang}}" class="form-select mt-1 border-none flex p-1 px-4 py-2 w-80">
+                <option>
+                    Sélectionner                     
+                </option>
+				{% for cat in categories %}
+					<option value={{ cat.id }}>
+						{{ cat.category }}
+					</option>
+				{% endfor %}
+            </select>
+        </div>
+    </div>
+</form>
+
+<script>
+    category = document.getElementById("select-category");
+    currentURL = window.location.href;
+    arrayURL = currentURL.split("/")
+    indexOfCat =  arrayURL.indexOf('catalog');
+    idLangAct = category.getAttribute("data-id-lang");
+    category.addEventListener("change", e => {
+        let categoryId = e.target.value;
+        arrayURL=arrayURL.slice(0,indexOfCat+1);
+        console.log(arrayURL);
+        arrayURL.push("rubric",categoryId,idLangAct);
+        window.location.href = arrayURL.join("/");
+    });
+
+</script>

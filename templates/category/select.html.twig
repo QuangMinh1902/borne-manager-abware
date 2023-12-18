@@ -1,0 +1,20 @@
+{# category/select.html.twig #}
+
+
+{% if categories is not empty %}
+	<label for="idCategory" class=" mt-[20px]">
+		Rubriques :
+	</label>
+	<select id="select-category" required="required" name="idCategory" class="bg-gray-50 text-sm rounded-lg focus:border-blue-500 w-1/2 p-2.5">
+		{% for cat in categories %}
+			<option value="{{ cat.id }}" data-categories="{{cat.category}}" 
+				{% if cat.id == selectedId %} selected="selected" {% endif %}>
+					{{ cat.category }}
+			</option>
+		{% endfor %}
+	</select>
+{% else %}
+	<div class="min-w-max w-full table-auto">
+		pas de rubrique
+	</div>
+{% endif %}

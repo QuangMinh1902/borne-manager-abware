@@ -1,0 +1,208 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ controller_title }} 
+{% endblock %}
+
+{% block body %}
+    <div class="flex flex-col flex-1">
+    {# {% if clist is not empty %}  #}
+        <form name="event_edit_form" method="POST" enctype="multipart/form-data" action="{{ path('update_event', {'idCatalog': idCatalog, 'idLang': idLang }) }}" 
+            class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+
+            <div class="flex w-full mt-1 bg-white"> 
+                {{ include('event/lang.html.twig', {'idLang' : clist.idLang}) }} 
+            </div>
+
+            {{ include('event/message.html.twig', {}) }} 
+
+            <div class="event_header flex py-2 border-2 rounded-md border-gray-200">
+                {{ include('event/update/head.html.twig', {}) }}
+            </div>
+
+            <div class="event_info py-2 my-2 flex flex-col flex-1"> 
+                <div class="flex w-full py-2 my-2">
+                    <div class="w-80 py-2 my-2 flex-initial">
+                        <div class="pb-2 mb-2">
+                            {{ include('lang/select.html.twig', {'selectedId' : clist.idLang}) }}
+                        </div>
+
+                        <div class="py-2 my-2">
+                            {{ include('category/select.html.twig', {'selectedId' : clist.idCategory}) }}
+                        </div>
+
+                        <div class="mt-2 pt-2">
+                            {{ include('event/datefiled.html.twig', {
+                                'datelabel' : 'Date prévue de diffusion', 'datename' : 'startDate', 'datevalue' : clist.startDate}) }}
+                        </div>
+
+                        <div class="py-2 my-2">
+                            {{ include('event/datefiled.html.twig', {
+                                'datelabel' : 'Date de fin de diffusion', 'datename' : 'endDate', 'datevalue' : clist.endDate}) }}
+                        </div>
+                    </div>
+
+                    <div class="flex-grow flex-col justify-start">
+                        <div class="flex flex-col flex-initial">
+                            <div class="m-4">
+                                {{ include('event/update/textarea.html.twig', {
+                                    'name' : 'information',
+                                    'title' : 'Informations pratiques',
+                                    'textareanote' : clist.information,
+                                    'maxlenght' : 450}) }}
+                            </div>
+                            <div class="m-4">
+                                {{ include('event/update/textarea.html.twig', {
+                                    'name' : 'description',
+                                    'title' : 'Description',
+                                    'textareanote' : clist.description,
+                                    'maxlenght' : 1350}) }}
+                            </div>
+                            <div class="m-4">
+                                {{ include('event/update/textarea.html.twig', {
+                                    'name' : 'event',
+                                    'title' : 'Evénements du moment',
+                                    'textareanote' : clist.event,
+                                    'maxlenght' : 450}) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-96 flex-initial">
+                        <div class="flex flex-row justify-around">
+                            <div class="m-4">
+                                {{ include('media/upload.html.twig', {
+                                    'upload' : 'logo',
+                                    'img': clist.logo, 
+                                    'input': 'inplogo', 
+                                    'label': 'lablogo', 
+                                    'imgpath': clist.logoPath }) 
+                                }}
+                            </div>
+                            <div class="m-4">
+                                {{ include('media/upload.html.twig', {
+                                    'upload' : 'cover', 
+                                    'img': clist.cover, 
+                                    'input': 'inpcover', 
+                                    'label': 'labcover', 
+                                    'imgpath': clist.coverPath }) 
+                                }}
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row justify-around">
+                            <div class="m-4">
+                                {{ include('media/upload.html.twig', {
+                                    'upload' : 'qrcode', 
+                                    'img': clist.qrcode, 
+                                    'input': 'inpqrcode', 
+                                    'label': 'labqrcode', 
+                                    'imgpath': clist.qrcodePath }) 
+                                }}
+                            </div>
+                            <div class="m-4">
+                                {{ include('media/upload.html.twig', {
+                                    'upload' : 'vis1',  
+                                    'img': clist.vis1, 
+                                    'input': 'inpvis1', 
+                                    'label': 'labvis1', 
+                                    'imgpath': clist.vis1Path }) 
+                                }}
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row justify-around">
+                        <div class="m-4">
+                            {{ include('media/upload.html.twig', {
+                                'upload' : 'vis2',
+                                'img': clist.vis2, 
+                                'input': 'inpvis2', 
+                                'label': 'labvis2', 
+                                'imgpath':  clist.vis2Path }) }}
+                        </div>
+                            <div class="m-4">
+                                {{ include('media/upload.html.twig', {
+                                    'upload' : 'video', 
+                                    'img': clist.video, 
+                                    'input': 'inpvideo', 
+                                    'label': 'labvideo', 
+                                    'imgpath': clist.videoPath }) 
+                                }}
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="event_btn py-2 my-2 flex w-full"> 
+                <div class="w-80 py-2 my-2"></div>
+                <div class="flex flex-1 justify-between"> 
+                    <a href="{{ path('catalog_lang', {'idLang': idLang}) }}" 
+                        class="hover:bg-blue-500 hover:text-white text-blue-500 border-blue-500 uppercase border border-solid 
+                            bg-transparent font-bold text-sm px-6 py-3 mr-1 mb-1 rounded-full outline-none focus:outline-none ease-linear 
+                            transition-all duration-150">
+                                Annuler 
+                    </a>
+                    <button type="submit" 
+                        class="hover:bg-blue-500 hover:text-white text-blue-500 border-blue-500 uppercase border border-solid bg-transparent 
+                            font-bold text-sm px-6 py-3 mr-1 mb-1 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150">
+                                Valider 
+                    </button>
+                </div>
+                <div class="w-96 py-2 my-2 float-none"></div>
+            </div>
+        </form>
+    </div>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.getElementsByTagName("INPUT");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].oninvalid = function(e) {
+                e.target.setCustomValidity("");
+                if (!e.target.validity.valid) {
+                    e.target.setCustomValidity("This field cannot be left blank");
+                }
+            };
+            elements[i].oninput = function(e) {
+                e.target.setCustomValidity("");
+            };
+
+            // PLS - Count number of char  
+            if(elements[i].name == 'title' && elements.title.value != ''){
+                countChar(elements.title, 35)
+            } 
+            if(elements[i].name == 'subtitle' && elements.subtitle.value != ''){ 
+                countChar(elements.subtitle, 60)
+            }
+        } 
+        
+        var textarea = document.getElementsByTagName("TEXTAREA");
+        for (var i = 0; i < textarea.length; i++) { 
+            if(textarea[i].name == 'description' && textarea.description.value != ''){
+                countChar(textarea.description, 1350)
+            } 
+            if(textarea[i].name == 'event' && textarea.event.value != ''){ 
+                countChar(textarea.event, 450)
+            }
+            if(textarea[i].name == 'information' && textarea.information.value != ''){ 
+                countChar(textarea.information, 450)
+            }
+        } 
+
+        const flash = document.querySelectorAll('[class^="flash-"]');
+       
+    });
+     
+    // PLS - Count number of char   
+    function countChar(val, maxlenght) { 
+        var restants=maxlenght-val.value.length;
+        if (restants <= 0){ 
+            document.getElementById(val.name).innerHTML = 0; 
+            val.value = val.value.substring(0,maxlenght)
+       }
+        else 
+            document.getElementById(val.name).innerHTML=restants;
+    }
+</script>
+{% endblock %}
+   

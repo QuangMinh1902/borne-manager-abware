@@ -1,0 +1,35 @@
+{# event/head.html.twig #} 
+{% if langSelect is not empty %}
+    <ul id="tabs" class="flex px-1 mb-2 w-full flex-wrap border-b border-gray-200">
+        {% for lgs in langSelect %}
+            <li class="text-gray-600 w-10 ml-3 h-[40px] p-2 block font-semibold rounded-t uppercase focus:outline-none bg-[#50c6fc]
+                    {% if lgs.idLang == idLang %}border-blue-500 text-blue-500 border-2 {% endif %}">
+                <a href="{{ path('edit_event', {'idCatalog': idCatalog, 'idLang': lgs.idLang}) }}" 
+                    class="">
+                        {{ lgs.code }}
+                </a>
+            </li>
+        {% endfor %}
+
+        {% if langNotRegistered is defined %}
+            {% for lgsNotSelected in langNotRegistered %}
+                <li class="text-neutral-50 ml-3 bg-[#b5b5b5] cursor-not-allowed mr-2 py-2 px-2 block font-semibold -mb-px rounded-t uppercase focus:outline-none">
+                    {{lgsNotSelected.code}}
+                </li>
+            {% endfor %}
+        {% endif %}
+
+        {% if idLang is not empty %}
+            <a href="{{ path('new_event', {'idCatalog': idCatalog}) }}"
+                 class="text-gray-600 py-4 px-4 block uppercase focus:outline-none border-b-2 font-medium border-blue-500 hover:text-blue-500">
+                ajouter langue
+            </a>
+        {% endif %} 
+    </ul>
+{% else %}
+    <nav class="flex flex-col sm:flex-row">
+        <button class="text-gray-600 py-4 px-4 block uppercase hover:text-blue-500 focus:outline-none border-b-2 font-medium border-blue-500">
+        ajouter langue
+        </button>
+    </nav>
+{% endif %}

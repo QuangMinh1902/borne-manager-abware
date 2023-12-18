@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Liste des langages
+{% endblock %}
+
+{% block body %}
+	{% for message in app.flashes('success') %}
+		<div class="text-neutral-200" style="background-color:#15c429; height:30px; padding:5px" id="alert-mess">
+			{{ message }}
+		</div>
+	{% endfor %}
+
+	<div class="flex flex-col w-table justify-start mt-10">
+		<div class="flex absolute">
+
+<!-- Modal toggle -->
+<button id="add-button" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="py-3 px-6 m-4 h-[34px] text-white rounded-lg bg-green-400 shadow-lg">
+  Ajouter Lang
+</button>
+
+<!-- Main modal -->
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-half max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+            <button type="button" class="absolute top-6 right-3 text-gray-400 bg-transparent hover:bg-gray-100 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="px-6 py-6 lg:px-8">
+                <form class="space-y-6" action="" method="POST" id="form">
+                    <div>
+                        <label for="code" class="mr-3 leading-[40px]">Code</label>
+						<input type="text" minlength="2" maxlength="2" name="code" id="code" required class="bg-gray-50 mr-4 text-sm rounded-lg focus:border-blue-500 w-full p-2.5 ">
+                    </div>
+                    <div>
+                        <label for="lang" class="mr-3 leading-[40px]">Langue</label>
+						<input type="text" minlength="2" maxlength="30" name="lang" id="lang" required class="bg-gray-50 text-sm rounded-lg focus:border-blue-500 w-full p-2.5 ">
+                    </div>
+                    <button type="submit" class="border border-green-500 bg-green-500 text-white rounded-md px-4
+				    py-2 m-3 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline">
+					Submit
+					</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+		</div>
+	{% if langs is not empty %}
+		{% for lang in langs %}
+			{% if loop.first %}
+				<div class="flex justify-center items-center">
+					<table class="flex-half text-center mt-13 ">
+						<thead class="border-b">
+							<tr class="bg-gray-200 text-gray-600 uppercase text-base leading-normal">
+								<th scope="col" class="py-3 px-6 text-center">
+									Code
+								</th>
+
+								<th scope="col" class="py-3 px-6 text-center">
+									Lang
+								</th>
+								<th scope="col" class="py-3 px-6 text-center" colspan="2">
+									Actions
+								</th>
+							</tr>
+						</thead>
+				<tbody class="catalog-list text-gray-600">
+				{% endif %}
+				{% if loop.index is even %}
+					<tr class="cataloglist text-base border-b bg-[#d2eff4]">
+					{% else %}
+						<tr class="cataloglist text-base border-b">
+						{% endif %}
+						<td class="py-3 px-6 text-center">
+							{{ lang.code }}
+						</td>
+						<td class="py-3 px-6 text-center">
+							{{ lang.lang }}
+						</td>
+
+						<td>
+							<span data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+								  id="{{lang.id}}" data-code="{{ lang.code }}" data-lang="{{ lang.lang }}" onclick="handleClick(this)">
+								<i class="fa-sharp fa-solid fa-pen-to-square fa-lg cursor-pointer" style="color: #5a8ce2;"></i>
+							</span>
+						</td>
+						<td>
+							<a href="{{ path('lang_delete', {id:lang.id}) }}" onclick="return confirm('êtes-vous sur ?')">
+								<i class="fa-solid fa-trash-can fa-lg cursor-pointer" style="color: #de2121;"></i>
+							</a>
+						</td>
+					</tr>
+					{% if loop.last %}
+					</tbody>
+			</table>
+					{% endif %}
+				</div>
+			{% endfor %}
+	{% else %}
+		Il y a aucune lang
+	{% endif %}
+	</div>
+	<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const alertElement = document.getElementById('alert-mess');
+		if (alertElement) {
+			setTimeout(() => {
+				alertElement.remove();
+			}, 5000);
+		} 
+	});
+
+	function handleClick(clickedElement) {
+		const elementId = clickedElement.id;
+		let code = clickedElement.getAttribute("data-code");
+		let lang = clickedElement.getAttribute("data-lang");
+		document.getElementById("code").value=code;
+		document.getElementById("lang").value=lang;
+		document.getElementById("form").setAttribute('action', `/lang/edit/${elementId}`);
+	}
+
+	document.getElementById("add-button").addEventListener("click", () => {
+		document.getElementById("form").setAttribute('action', '/lang/create');
+		document.getElementById("code").value="";
+		document.getElementById("lang").value="";
+	})
+
+	</script>
+{% endblock %}

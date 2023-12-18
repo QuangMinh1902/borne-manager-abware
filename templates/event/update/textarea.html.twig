@@ -1,0 +1,16 @@
+{# event/textarea.html.twig #}
+<div class="flex flex-col flex-1"> 
+    <label class="block text-left border-1 rounded-md border-gray-200 shadow">
+        <span class="flex justify-between">
+            <span for="{{ name }}" class="text-gray-700 infos_title flex font-bold tracking-wide text-xl whitespace-nowrap">
+                {{ title }}
+            </span>
+
+            <span id="{{ name }}" class="flex normal-case text-gray-400 italic text-sm mr-2">{{maxlenght}}</span>
+        </span> 
+        
+        <textarea required="required" rows="4" placeholder="{{ title }}" name="{{ name }}"  maxlenght="{{maxlenght}}" 
+            onKeyPress='countChar(this, {{ maxlenght }})' onKeyUp='countChar(this, {{ maxlenght }})'
+            class="events-body flex flex-1 border P-1 form-textarea mt-1 w-full infos_body">{{ textareanote }}</textarea>
+    </label>
+</div>

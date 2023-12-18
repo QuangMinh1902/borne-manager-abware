@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ controller_title }} !
+{% endblock %}
+
+{% block body %}
+    <div class="catalog w-full p-2 flex flex-col gap-5 bg-white font-sans leading-normal tracking-normal rounded">
+        {{ include('catalog/cathead.html.twig', {}) }}
+
+        <div class="toolbar flex flex-wrap gap-20 pl-10 text-blue-900">
+            <div class="filtbar flex flex-col">
+                {{ include('catalog/filtbar.html.twig', {}) }}  
+            </div> 
+              
+            <div class="filterubrics flex flex-col"> 
+                {{ include('catalog/filterubrics.html.twig', {}) }}  
+            </div>
+
+            <div class="language flex flex-col text-blue-900"> 
+                {{ include('lang/select.html.twig', {'selectedId' : ''}) }} 
+            </div> 
+             
+        </div>
+
+        <div class="listcatalog flex flex-col flex-1 gap-2 px-2 item"> 
+            {{ include('catalog/listcatalog.html.twig', {}) }}  
+        </div> 
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    var catalogsData = document.querySelector('.catalog-list');
+    var catalogLists = catalogsData.dataset.catalogList; 
+    // or with jQuery
+     var catalogList = $('.catalog-list').data('catalogList');  
+ 
+    let today = new Date();  
+    const formatYmd = date => date.toISOString().slice(0, 10);
+    const formatDMY = date => date.toLocaleDateString('en-GB');
+    
+    // 
+    $('select#select-language').change(function() {
+        var selected = {idLang : $(this).val()};
+        var idLang = $(this).val();
+        window.location.assign('/catalog/lang/'+idLang)
+     }); 
+ 
+
+    const idLangTab = '{{idLang}}';
+        console.log(idLangTab);
+
+    function generateFilterTable(catFilter){ 
+        $(".cataloglist").remove();
+        catFilter.map((row, i) => {
+            $("tbody#tbody-catalist").append('<tr class="cataloglist border-b border-gray-200 hover:bg-gray-100">'
+                + '<td class="py-3 px-6 text-left whitespace-nowrap"><div class="idCatalog flex items-center">' 
+                    + row.idCatalog + 
+                '</div></td>' +
+                '<td class="py-3 px-6 text-left whitespace-nowrap"><div class="title flex items-center">' 
+                    + row.title + 
+                '</div></td>' +
+                '<td class="py-3 px-6 text-center whitespace-nowrap"><div class="category items-center">' 
+                    + row.category + 
+                '</div></td>' +
+                '<td class="py-3 px-6 text-center whitespace-nowrap"><div class="startDate items-center">' 
+                    + row.startDate + 
+                '</div></td>' +
+                '<td class="py-3 px-6 text-center whitespace-nowrap"><div class="endDate items-center">' 
+                    + row.endDate + 
+                '</div></td>' +
+                 '<td class="py-3 px-6 text-center whitespace-nowrap"><div class="code items-center">'
+                    + row.lang + 
+                '</div></td>' +
+                '<td class="py-3 px-6 text-center whitespace-nowrap"><div class="idCatalog flex items-center">'
+                   /* +'<a href="/event/'+row.idCatalog+'/'+row.idLang+'" class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">'
+                        +'<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>'
+                    +'</a>' */
+                    +'<a href="/event/edit/'+row.idCatalog+'/'+idLangTab+'" class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">'
+                        +'<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>'
+                    +'</a>'
+                    +'<a href="/catalog/delete/'+row.idCatalog+'" id="delete-catalog" class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">'
+                        +'<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>'
+                    +'</a>'
+                +'</div></td></tr>');
+        })
+    } 
+}); 
+</script>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {{ controller_title }}
+{% endblock %}
+{% block body %}
+    <div class="flex flex-col mt-10 w-full ml-64 mr-20">
+        <form name="event_form" id="theform" method="POST" enctype="multipart/form-data" action="{{ path('event_create') }}" class="bg-white">
+            {{ include('event/message.html.twig', {}) }}
+            <div class="flex flex-row justify-around">
+                <div class="flex flex-col  flex-half">
+                    {{ include('event/head.html.twig', {}) }}
+                    {{ include('lang/select.html.twig', {'selectedId' : ''}) }}
+                    {{ include('category/select.html.twig', {'selectedId' : ''}) }}
+                    {{ include('event/datefiled.html.twig', {
+                        'datelabel' : 'Date prévue de diffusion', 'datename' : 'startDate', 'datevalue' : ''}) }}
+                    {{ include('event/datefiled.html.twig', {
+                        'datelabel' : 'Date de fin de diffusion', 'datename' : 'endDate', 'datevalue' : ''}) }}
+                </div>
+                <div class="flex flex-col flex-half gap-2">
+                    {{ include('event/textarea.html.twig', {'name' : 'information', 'title' : 'Informations pratiques', 'maxlenght' : 450}) }}
+                    {{ include('event/textarea.html.twig', {'name' : 'description', 'title' : 'Description', 'maxlenght' : 1350}) }}
+                    {{ include('event/textarea.html.twig', {'name' : 'event', 'title' : 'Evénements du moment', 'maxlenght' : 450}) }}
+                    <h2 class="text-xl font-medium mt-3">Media</h2>
+                    <div class="flex flex-wrap gap-2  justify-between">
+                        {{ include('media/upload.html.twig', {
+                            'upload' : 'logo', 'img': '', 'input': 'inplogo', 'label': 'lablogo', 'imgpath': ''}) }}
+                        {{ include('media/upload.html.twig', {
+                            'upload' : 'cover', 'img': '', 'input': 'inpcover', 'label': 'labcover', 'imgpath': '' }) }}
+                        {{ include('media/upload.html.twig', {
+                            'upload' : 'qrcode', 'img': '', 'input': 'inpqrcode', 'label': 'labqrcode', 'imgpath': ''}) }}
+                        {{ include('media/upload.html.twig', {
+                            'upload' : 'vis1', 'img': '', 'input': 'inpvis1', 'label': 'labvis1', 'imgpath': ''}) }}
+                        {{ include('media/upload.html.twig', {
+                            'upload' : 'vis2', 'img': '', 'input': 'inpvis2', 'label': 'labvis2', 'imgpath': ''}) }}
+                        {{ include('media/upload.html.twig', {
+                           'upload' : 'video', 'img': '', 'input': 'inpvideo', 'label': 'labvideo', 'imgpath': '' }) }}
+                    </div>
+                </div>
+            </div>
+            <div class="event_btn flex w-full">
+                <div class="flex flex-1 justify-center mt-10">
+                    <button type="submit" id="btnsubmit" class="bg-my-blue p-3 text-xl text-slate-200 rounded-2xl w-1/2 hover:bg-blue-700	">
+                        Enregistrer 
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("load", e => {
+            let textA = document.getElementsByTagName("textarea");
+            Array.from(textA).forEach(text => {
+                text.addEventListener("input", e =>{
+                    let maxL= text.getAttribute("maxlenght");
+                    let lenAc= text.value.length;
+                    let span = document.querySelector("label[for="+ text.id +"]>span");
+                    span.textContent = maxL - lenAc;
+                });
+            });
+
+            let title = document.getElementById("title");
+            let subtitle = document.getElementById("subtitle");
+            let textareas = document.getElementsByClassName("textarea");
+            title.addEventListener("input", e => {
+               let maxL = title.getAttribute("maxlenght");
+               let lenAc = title.value.length;
+               let span =  document.querySelector("span[for="+ title.id +"]");
+               let remain = maxL - lenAc;
+               span.textContent = remain;
+               if (title.value.length >= maxL) {
+                    span.textContent = 0;
+                    title.value = title.value.slice(0, maxL);
+                }
+            });
+            subtitle.addEventListener("input", e => {
+               let maxL = subtitle.getAttribute("maxlenght");
+               let lenAc = subtitle.value.length;
+               let span =  document.querySelector("span[for="+ subtitle.id +"]");
+               let remain = maxL - lenAc;
+               span.textContent = remain;
+               if (subtitle.value.length >= maxL) {
+                    span.textContent = 0;
+                    subtitle.value = subtitle.value.slice(0, maxL);
+                }
+            });
+
+            for(let text of textareas){
+                console.log(text);
+                text.addEventListener("input", e => {
+                    let maxL = text.getAttribute("maxlenght");
+                    let lenAc = text.value.length;
+                    let span =  document.querySelector("span[for="+ text.id +"]");
+                    let remain = maxL - lenAc;
+                    span.textContent = remain;
+                    if (text.value.length >= maxL) {
+                         span.textContent = 0;
+                         text.value = text.value.slice(0, maxL);
+                     }
+                });
+            }
+
+            let btnSubmit = document.getElementById("btnsubmit");
+            let theform = document.getElementById("theform");
+            btnSubmit.addEventListener("click", e => {
+                if(theform.checkValidity()=== false){
+                    let inputs = document.getElementsByTagName("input");
+                    Array.from(inputs).forEach( input => {
+                        input.setCustomValidity("");
+                        let isvalid = input.checkValidity();
+                        if(!isvalid){
+                            input.setCustomValidity("Ce champ ne peut pas être vide");
+                        }
+                    });
+
+                    Array.from(textA).forEach(text => {
+                        text.setCustomValidity("");
+                        let isvalid = text.checkValidity();
+                        if(!isvalid){
+                            text.setCustomValidity("Ce champ ne peut pas être vide");
+                        }
+                    });
+
+                }
+            })
+        });
+    </script>
+{% endblock %}

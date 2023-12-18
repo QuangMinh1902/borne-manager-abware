@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Log in!
+{% endblock %}
+
+{% block body %} 
+	<div class="w-full max-w-xs m-auto border border-gray-400 rounded p-5">
+
+		<form method="post" action="{{path('app_login')}}" name="app_login" class="py-4" enctype="multipart/form-data"> 
+			<p class="text-xl leading-normal mt-0 text-center font-bold pb-4 text-black">
+                Authentification
+            </p>
+
+			<div>
+				<label class="block mb-2 text-black" for="inputEmail">Email</label>
+				<div class="flex items-center bg-white rounded shadow-md mb-2">
+					<span class="px-3">
+						<svg class="fill-current text-black w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+							<path d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z"/></svg>
+					</span>
+					<input type="email" name="email" value="{{ last_username }}" required autofocus id="inputEmail" autocomplete="email" 
+                        class="w-full p-2 mb-2 mr-3 text-black border-b-2 border-t-0 border-l-0 border-r-0 border-gray-500 outline-none focus:bg-gray-200"/>
+				</div>
+			</div>
+			<div>
+				<label class="block mb-2 text-black" htmlfor="password">Mot de Passe</label>
+				<div class="flex items-center bg-white rounded shadow-md mb-2">
+					<span class="px-3">
+						<svg class="fill-current text-black w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+							<path d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z"/></svg>
+					</span>
+					<input type="password" name="password" required id="inputPassword" autocomplete="current-password" 
+                        class="w-full p-2 mb-2 mr-3 text-black border-b-2 border-t-0 border-l-0 border-r-0 border-gray-500 outline-none focus:bg-gray-200"/>
+				</div>
+			</div>
+
+			<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+			<div class="flex items-center justify-between mt-8">
+				<button type="submit" class="w-full text-white bg-gray-800 hover:bg-gray-200 hover:text-gray-900 font-bold py-2 px-4 mb-4 rounded-full">
+					Connexion
+				</button>
+			</div>
+		</form>
+	</div> 
+{% endblock %}

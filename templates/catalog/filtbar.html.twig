@@ -1,0 +1,35 @@
+{# catalog/filtbar.html.twig #}
+<div id="filtbar" class="form flex flex-col items-center justify-center gap-2"> 
+	{{ include('catalog/search.html.twig') }}  
+
+	<div class="flex flex-col relative right-1/4">
+		<div class="flex items-center gap-2">
+			<input id="check-diffusion" data-id-lang={{idLang}} class="rounded border-blue-400 hidden" type="checkbox" name="diffusion"/>
+			<label for="check-diffusion" class="font-semibold cursor-pointer hover:text-fuchsia-600	">
+				En cours de diffusion
+			</label>
+		</div>
+
+		<div class="flex items-center gap-2">
+			<input id="check-complete" class="rounded bg-gray-200 border-blue-400" type="checkbox" name="complete" disabled/>
+			<label for="complete" class="flex font-semibold whitespace-nowrap">
+				Entrées complète
+			</label>
+		</div>
+	</div>
+</div>
+
+<script>
+	let currentURL = window.location.href;
+	let checkbox = document.getElementById("check-diffusion") ;
+	let arrayURL = currentURL.split("/")
+	let indexOfCat =  arrayURL.indexOf('catalog');
+	let idLangAct = checkbox.getAttribute("data-id-lang");
+	checkbox.addEventListener("change", function() {
+		if (checkbox.checked){
+			arrayURL=arrayURL.slice(0,indexOfCat+1);
+			arrayURL.push("available",idLangAct);
+		}
+		window.location.href = arrayURL.join("/");
+	});
+</script>

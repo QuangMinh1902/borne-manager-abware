@@ -1,0 +1,31 @@
+{# event/update/message.html.twig #}
+
+{% for message in app.flashes('info') %} 
+  <div class="flash-info bg-blue-100 rounded-lg p-4 mb-4 text-sm text-blue-700 dark:bg-blue-200 dark:text-blue-800" role="alert">
+    <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
+  </div>
+{% endfor %}
+
+{% for message in app.flashes('danger') %}
+  <div class="flash-danger bg-red-100 rounded-lg p-4 mb-4 text-sm text-red-700 dark:bg-red-200 dark:text-red-800" role="alert">
+    <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
+  </div>
+{% endfor %}
+
+{% for message in app.flashes('success') %}
+  <div class="flash-success bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700 dark:bg-green-200 dark:text-green-800" role="alert">
+    <span class="font-medium">Success!</span> Change a few things up and try submitting again.
+  </div>
+{% endfor %}
+
+{% for message in app.flashes('warning') %}
+  <div class="flash-warning bg-yellow-100 rounded-lg p-4 mb-4 text-sm text-yellow-700 dark:bg-yellow-200 dark:text-yellow-800" role="alert">
+    <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
+  </div>
+{% endfor %}
+
+{% for message in app.flashes('alert') %}
+  <div class="flash-alert bg-gray-100 rounded-lg p-4 mb-4 text-sm text-gray-700 dark:bg-gray-700 dark:text-gray-300" role="alert">
+    <span class="font-medium">Dark alert!</span> Change a few things up and try submitting again.
+  </div>
+{% endfor %} 

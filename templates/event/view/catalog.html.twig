@@ -1,0 +1,159 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	View
+{% endblock %}
+
+{% block body %}
+
+	<style>
+		.popup-image {
+			position: fixed;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.9);
+			z-index: 100;
+			display: none;
+            align-items : center;
+            justify-content: center;
+		}
+
+		.popup-image img {
+            position: absolute;
+			width: 700px;
+			height: 500px;
+			object-fit: cover;
+			border: 5px solid #fff;
+			border-radius: 5px;
+		}
+
+		.popup-image span {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			font-size: 60px;
+			font-weight: bolder;
+			color: #fff;
+			cursor: pointer;
+			z-index: 100;
+		}
+
+		.selected-lang {
+			padding: 2px;
+			box-sizing: border-box;
+			background-color: rgba(198, 188, 188, 0.5);
+		}
+
+		.loupe {
+			box-sizing: border-box;
+			top: 20px;
+			right: 20px;
+			padding: 8px;
+		}
+	</style>
+	<div class="flex flex-col w-full m-auto">
+		<nav class="flex justify-between bg-[#352c2c] w-4/5 m-auto">
+			<div class="flex-[0_1_20%] p-5 mt-[10px] mb-[10px] ml-[10px] border-8 rounded-sm border-slate-300">
+				<img src="{{ asset(clist.logoPath) }}" alt="logo" class="w-full h-full">
+			</div>
+			<div class="flex-[0_1_40%] p-[15px]">
+				<h3 class="text-2xl	text-zinc-100 mt-[10px] mb-[110px]">
+					{{ clist.title }}
+				</h3>
+				<h4 class="text-xl text-zinc-100">
+					{{ clist.subtitle }}
+				</h4>
+			</div>
+			<div class="flex-[0_1_40%]">
+				<div class="flex justify-end ">
+					{% for lang in langs %}
+						<img src="{{asset('images/langages/' ~ lang.lang ~ '.png' )}}" data-id-lang="{{lang.idLang}}" class="langage w-[31px] m-2 cursor-pointer" title="{{lang.lang}}">
+					{% endfor %}
+				</div>
+				{% if clist.qrcodePath != '/uploads/' %}
+					<div class="mt-[10px] flex justify-end ">
+						<div class="mt-[100px]">
+							<i class="fa-solid fa-mobile-screen-button fa-2xl" style="color: #dcdf20;">
+								<span class="text-xs">
+									Flashez-moi
+								</span>
+							</i>
+							<i class="fa-solid fa-arrow-right fa-2xl" style="color: #dfd816;"></i>
+						</div>
+						<div class="galery">
+							<img src="{{ asset(clist.qrcodePath) }}" class="w-[200px] h-[200px] p-[10px] ">
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</nav>
+		<div class="flex bg-[#565656] h-100vh relative w-4/5 m-auto justify-around">
+			<div class="flex-[0_1_30%] bg-[#7f7f7f] text-white border-2 m-3 rounded-lg">
+				<h1 class="text-2xl p-10">
+					Infos pratiques
+				</h1>
+				<p class="w-auto p-10">
+					{{ clist.information }}
+				</p>
+				<div class="m-[30px] relative">
+					<img src="{{ asset(clist.vis1Path) }}" class="border-4 border-white rounded-lg">
+					<div class="loupe absolute border border-black cursor-pointer rounded-md bg-black bg-opacity-50" data-img-source="{{clist.vis1Path}}">
+						<i class="fa-sharp fa-solid fa-magnifying-glass fa-2xl" style="color: #0f0f10;"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex-[0_1_70%] flex flex-col p-[30px] bg-[#7f7f7f] border-2 m-3 rounded-lg">
+				<div>
+					{{clist.description}}
+				</div>
+
+				<div class="mt-10 flex bg-slate-50 h-[200px] items-center justify-center p-4 border-[4px] rounded-lg">
+					<div class="flex-[0_1_70%] text-lg	">
+						{{clist.event}}
+					</div>
+					<div class="flex-[0_1_30%] relative">
+						<img src="{{ asset(clist.vis2Path) }}" class="object-cover border-4 bg-slate-400 rounded-lg">
+						<div class="loupe absolute border border-black cursor-pointer rounded-md bg-black bg-opacity-50" data-img-source="{{clist.vis2Path}}">
+							<i class="fa-sharp fa-solid fa-magnifying-glass fa-2xl" style="color: #0f0f10;"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup-image">
+			<span class="">&times;</span>
+			<img src="" class="">
+		</div>
+
+	</div>
+
+	<script>
+		document.querySelectorAll('.loupe').forEach(elm => {
+            elm.addEventListener("click", e => {
+            document.querySelector(".popup-image").style.display = "flex";
+            document.querySelector(".popup-image img").src = elm.getAttribute("data-img-source");
+            })
+            });
+            document.querySelector(".popup-image span").addEventListener("click", e => {
+            document.querySelector(".popup-image").style.display = "none";
+            });
+
+            let langs = document.querySelectorAll(".langage");
+            console.log(langs);
+            let pathURI = window.location.pathname;
+            let arrayPath = pathURI.split("/");
+            langs.forEach(lg => {
+            lg.addEventListener("click", e => {
+            let idLang = lg.getAttribute("data-id-lang");
+            arrayPath[arrayPath.length - 1] = idLang;
+            let newPath = arrayPath.join("/");
+            lg.classList.add("selected-lang");
+            window.location.href = newPath;
+            })
+            })
+	</script>
+
+{% endblock %}

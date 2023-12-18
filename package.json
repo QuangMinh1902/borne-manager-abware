@@ -1,0 +1,35 @@
+{
+  "name": "borne-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "reset-watch": "webpack && webpack --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@symfony/stimulus-bridge": "^3.2.2",
+    "@symfony/webpack-encore": "^4.3.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "core-js": "^3.30.2",
+    "postcss": "^8.4.23",
+    "postcss-loader": "^7.3.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "tailwindcss": "^3.3.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-notifier": "^1.15.0"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@themesberg/flowbite": "^1.3.0",
+    "flowbite": "^1.6.5",
+    "tw-elements": "^1.0.0-beta2"
+  }
+}

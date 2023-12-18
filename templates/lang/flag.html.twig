@@ -1,0 +1,61 @@
+<style>
+
+    .list-flag{
+        background-color: #FFFFFF;
+        display:none;
+    }
+    .list-flag ul {
+        height:150px;
+        cursor: pointer;
+        overflow:hidden; 
+        overflow-y:scroll;
+    }
+
+    .display-item{
+        display:block;
+    }
+
+    .hide-item{
+        display:none;
+    }
+    .move{
+        position: absolute;
+        right:-15%;
+        top:5%;
+    }
+
+</style>
+
+{% block body %}
+    <div class="default-list" data-catalog = {{cat.idCatalog}}>
+        {% for lang in langs | slice(0,cat.idLang) %}
+            {% if loop.index == cat.idLang %}
+                    <img src="{{ asset('images/flags/'~ lang.lang ~'.png') }}" alt="flag">
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% if langs| length > 2 %}
+        <div style ="position:relative;">
+        {% for lang in langs %}
+            {% if loop.first %}
+                <span class="popup" data-catalog = {{cat.idCatalog}}>
+                    <i class="fa-regular fa-plus fa-sm " style="color: #050505; margin-left:5px; cursor:pointer;">
+                    </i>
+                    <i class="fa-regular fa-x fa-xs hide-item" style="color: #000000; cursor:pointer;">
+                    </i>
+                </span>
+                <div class="list-flag" data-catalog = {{cat.idCatalog}}>
+                <ul>
+            {% endif %}
+                <li>
+                    <img src="{{ asset('images/flags/'~ lang.lang ~'.png') }}" style ="display:inline"> | {{lang.lang}}
+                </li>
+        {% endfor %}
+        {% if loop.last %}
+                </ul>
+            </div>
+        {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}

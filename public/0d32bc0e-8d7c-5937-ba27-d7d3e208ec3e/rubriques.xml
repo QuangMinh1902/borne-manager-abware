@@ -1,0 +1,515 @@
+﻿<rubriques>
+<infos>
+<idRubrique>1</idRubrique>
+<nom_francais>Spectacles</nom_francais>
+<nom_anglais>Entertainement</nom_anglais>
+<nom_espagnol>Entretenimiento</nom_espagnol>
+<nom_allemand>Sehenswürdigkeiten</nom_allemand>
+<photo>1_R.jpg</photo>
+<sous_rubriques>
+<idSousRurique>30</idSousRurique>
+<nom_sous_rubrique_francais>Cabaret</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>Cabaret</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Cabaret</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Kabarett</nom_sous_rubrique_allemand>
+<idVideos>30,12,2</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>31</idSousRurique>
+<nom_sous_rubrique_francais>Comédie musicale</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>Musical</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Musical</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Musical</nom_sous_rubrique_allemand>
+<idVideos>92,89</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>32</idSousRurique>
+<nom_sous_rubrique_francais>Ballet</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>Ballet</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Ballet</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Ballett</nom_sous_rubrique_allemand>
+<idVideos>95,54</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>38</idSousRurique>
+<nom_sous_rubrique_francais>Humour</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>New subheading</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Nueva subpartida</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Humor</nom_sous_rubrique_allemand>
+<idVideos>106,104,90,89</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>39</idSousRurique>
+<nom_sous_rubrique_francais>One man show</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>New subheading</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Nueva subpartida</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Ein-Mann-Show</nom_sous_rubrique_allemand>
+<idVideos>106</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>40</idSousRurique>
+<nom_sous_rubrique_francais>Théâtre</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>New subheading</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Nueva subpartida</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Theater</nom_sous_rubrique_allemand>
+<idVideos>105,89</idVideos>
+</sous_rubriques>
+</infos>
+<infos>
+<idRubrique>2</idRubrique>
+<nom_francais>Musées</nom_francais>
+<nom_anglais>Museums</nom_anglais>
+<nom_espagnol>Museos</nom_espagnol>
+<nom_allemand>Museen</nom_allemand>
+<photo>2_R.jpg</photo>
+</infos>
+<infos>
+<idRubrique>3</idRubrique>
+<nom_francais>Excursions &amp; balades</nom_francais>
+<nom_anglais>Sightseeing</nom_anglais>
+<nom_espagnol>Excursiones y Paseos</nom_espagnol>
+<nom_allemand>Ausflüge &amp; Touren</nom_allemand>
+<photo>3_R.jpg</photo>
+<sous_rubriques>
+<idSousRurique>33</idSousRurique>
+<nom_sous_rubrique_francais>Bus &amp; excursions</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>Buses &amp; excursions</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>autobuses y excursiones</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Bus &amp; Ausflüge</nom_sous_rubrique_allemand>
+<idVideos>68,13,8</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>34</idSousRurique>
+<nom_sous_rubrique_francais>Croisières</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>Cruises</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>cruceros</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Kreuzfahrten</nom_sous_rubrique_allemand>
+<idVideos>67,60,55</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>35</idSousRurique>
+<nom_sous_rubrique_francais>Voitures</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>Cars</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>coches</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Autos</nom_sous_rubrique_allemand>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>36</idSousRurique>
+<nom_sous_rubrique_francais>Navettes</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>Shuttles</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>lanzaderas</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Shuttles</nom_sous_rubrique_allemand>
+<idVideos>55</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>37</idSousRurique>
+<nom_sous_rubrique_francais>Visites pédestres &amp; vélo</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>Walking &amp; Bike Tours</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>visita pedestre y bicicleta</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Wandertouren und Fahrrad</nom_sous_rubrique_allemand>
+<idVideos>75,7</idVideos>
+</sous_rubriques>
+</infos>
+<infos>
+<idRubrique>4</idRubrique>
+<nom_francais>Restauration</nom_francais>
+<nom_anglais>Dining</nom_anglais>
+<nom_espagnol>Comedor</nom_espagnol>
+<nom_allemand>Restaurierung</nom_allemand>
+<photo>4_R.jpg</photo>
+<sous_rubriques>
+<idSousRurique>3</idSousRurique>
+<nom_sous_rubrique_francais>cuisine américaine</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>american foof</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Cocina americana</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Küche</nom_sous_rubrique_allemand>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>4</idSousRurique>
+<nom_sous_rubrique_francais>cuisine chinoise</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>chinese food</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Cocina incordia</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>chinesische Küche</nom_sous_rubrique_allemand>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>5</idSousRurique>
+<nom_sous_rubrique_francais>cuisine française</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>french food</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Cocina francesa</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Französisch Küche</nom_sous_rubrique_allemand>
+<idVideos>136,135,134,133,132,131,129,127,126,124,123,122,121,120,119,71</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>7</idSousRurique>
+<nom_sous_rubrique_francais>cuisine européenne</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>european food</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>Cocina europea</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>Europäische Küche</nom_sous_rubrique_allemand>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>42</idSousRurique>
+<nom_sous_rubrique_francais>1er arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>1st district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>1 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>1. Bezirk</nom_sous_rubrique_allemand>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>43</idSousRurique>
+<nom_sous_rubrique_francais>2ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>2nd district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>2 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>2. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>122</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>44</idSousRurique>
+<nom_sous_rubrique_francais>3ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>3rd district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>3 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>3. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>124</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>45</idSousRurique>
+<nom_sous_rubrique_francais>4ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>4th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>4 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>4. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>121</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>46</idSousRurique>
+<nom_sous_rubrique_francais>5ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>5th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>5 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>5. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>129</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>47</idSousRurique>
+<nom_sous_rubrique_francais>6ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>6th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>6 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>6. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>134</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>48</idSousRurique>
+<nom_sous_rubrique_francais>7ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>7th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>7 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>7. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>135</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>49</idSousRurique>
+<nom_sous_rubrique_francais>8ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>8th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>8 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>8. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>119</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>50</idSousRurique>
+<nom_sous_rubrique_francais>9ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>9th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>9 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>9. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>71</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>51</idSousRurique>
+<nom_sous_rubrique_francais>10ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>10th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>10 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>10. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>123</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>52</idSousRurique>
+<nom_sous_rubrique_francais>11ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>11th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>11 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>11. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>133</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>53</idSousRurique>
+<nom_sous_rubrique_francais>12ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>12th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>12 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>12. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>136</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>54</idSousRurique>
+<nom_sous_rubrique_francais>13ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>13th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>13 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>13. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>125</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>55</idSousRurique>
+<nom_sous_rubrique_francais>14ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>14th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>14 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>14. Bezirk</nom_sous_rubrique_allemand>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>56</idSousRurique>
+<nom_sous_rubrique_francais>15ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>15th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>15 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>15. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>127</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>57</idSousRurique>
+<nom_sous_rubrique_francais>16ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>16th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>16 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>16. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>131</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>58</idSousRurique>
+<nom_sous_rubrique_francais>17ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>17th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>17 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>17. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>126</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>59</idSousRurique>
+<nom_sous_rubrique_francais>18ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>18th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>18 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>18. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>120</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>60</idSousRurique>
+<nom_sous_rubrique_francais>19ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>19th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>19 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>19. Bezirk</nom_sous_rubrique_allemand>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>61</idSousRurique>
+<nom_sous_rubrique_francais>20ème arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>20th district</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>20 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>20. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>132</idVideos>
+</sous_rubriques>
+</infos>
+<infos>
+<idRubrique>5</idRubrique>
+<nom_francais>Shopping</nom_francais>
+<nom_anglais>Shopping</nom_anglais>
+<nom_espagnol>Compras</nom_espagnol>
+<nom_allemand>Einkaufen</nom_allemand>
+<photo>5_R.jpg</photo>
+</infos>
+<infos>
+<idRubrique>6</idRubrique>
+<nom_francais>Loisirs</nom_francais>
+<nom_anglais>Attractions</nom_anglais>
+<nom_espagnol>Ocios</nom_espagnol>
+<nom_allemand>Erholung</nom_allemand>
+<photo>6_R.jpg</photo>
+</infos>
+<infos>
+<idRubrique>7</idRubrique>
+<nom_francais>Services</nom_francais>
+<nom_anglais>Services</nom_anglais>
+<nom_espagnol>Servicios</nom_espagnol>
+<nom_allemand>Dienstleistungen</nom_allemand>
+<photo>7_R.jpg</photo>
+<sous_rubriques>
+<idSousRurique>10</idSousRurique>
+<nom_sous_rubrique_francais>1er arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>1st District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>1 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>1. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,29,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>11</idSousRurique>
+<nom_sous_rubrique_francais>2e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>2nd District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>2 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>2. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>12</idSousRurique>
+<nom_sous_rubrique_francais>3e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>3rd District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>3 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>3. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>13</idSousRurique>
+<nom_sous_rubrique_francais>4e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>4th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>4 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>4. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>14</idSousRurique>
+<nom_sous_rubrique_francais>5e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>5th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>5 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>5. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>15</idSousRurique>
+<nom_sous_rubrique_francais>6e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>6th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>6 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>6. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>16</idSousRurique>
+<nom_sous_rubrique_francais>7e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>7th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>7 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>7. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>17</idSousRurique>
+<nom_sous_rubrique_francais>8e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>8th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>8 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>8. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>18</idSousRurique>
+<nom_sous_rubrique_francais>9e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>9th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>9 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>9. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>19</idSousRurique>
+<nom_sous_rubrique_francais>10e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>10th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>10 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>10. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,40,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>20</idSousRurique>
+<nom_sous_rubrique_francais>11e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>11th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>11 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>11. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>21</idSousRurique>
+<nom_sous_rubrique_francais>12e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>12th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>12 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>12. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,42,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>22</idSousRurique>
+<nom_sous_rubrique_francais>13e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>13th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>13 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>13. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,43,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>23</idSousRurique>
+<nom_sous_rubrique_francais>14e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>14th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>14 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>14. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,46,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>24</idSousRurique>
+<nom_sous_rubrique_francais>15e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>15th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>15 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>15. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,47,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>25</idSousRurique>
+<nom_sous_rubrique_francais>16e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>16th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>16 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>16. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,48,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>26</idSousRurique>
+<nom_sous_rubrique_francais>17e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>17th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>17 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>17. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,49,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>27</idSousRurique>
+<nom_sous_rubrique_francais>18e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>18th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>18 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>18. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,50,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>28</idSousRurique>
+<nom_sous_rubrique_francais>19e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>19th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>19 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>19. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,51,16</idVideos>
+</sous_rubriques>
+<sous_rubriques>
+<idSousRurique>29</idSousRurique>
+<nom_sous_rubrique_francais>20e arrondissement</nom_sous_rubrique_francais>
+<nom_sous_rubrique_anglais>20th District</nom_sous_rubrique_anglais>
+<nom_sous_rubrique_espagnol>20 distrito</nom_sous_rubrique_espagnol>
+<nom_sous_rubrique_allemand>20. Bezirk</nom_sous_rubrique_allemand>
+<idVideos>79,76,52,16</idVideos>
+</sous_rubriques>
+</infos>
+<infos>
+<idRubrique>8</idRubrique>
+<nom_francais>Monuments &amp; Châteaux</nom_francais>
+<nom_anglais>Monuments &amp; Castles</nom_anglais>
+<nom_espagnol>Monumentos y Castillos</nom_espagnol>
+<nom_allemand>Denkmäler &amp; Schlösser</nom_allemand>
+<photo>8_R.jpg</photo>
+</infos>
+<infos>
+<idRubrique>9</idRubrique>
+<nom_francais>Bien-être</nom_francais>
+<nom_anglais>Well-being</nom_anglais>
+<nom_espagnol>Bienestar</nom_espagnol>
+<nom_allemand>Wohl</nom_allemand>
+<photo>9_R.jpg</photo>
+</infos>
+<infos>
+<idRubrique>10</idRubrique>
+<nom_francais>Plans de Paris</nom_francais>
+<nom_anglais>Paris' maps</nom_anglais>
+<nom_espagnol>Planes de París</nom_espagnol>
+<nom_allemand>Karten von Paris</nom_allemand>
+<photo>10_R.jpg</photo>
+</infos>
+</rubriques>

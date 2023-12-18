@@ -1,0 +1,21 @@
+{# lang/select.html.twig #}
+
+
+{% if langs is not empty %}
+	<label for="select-language" name="idLang" class="block mb-2 text-xl font-medium">Langues :</label>
+	<select id="select-language" name="idLang" class="bg-gray-50 text-sm rounded-lg focus:border-blue-500 w-1/2 p-2.5">
+		{% for lgs in langs %}
+			<option value="{{ lgs.id }}" data-lang-code="{{lgs.code}}" 
+				{% if lgs.id == selectedId %}
+					selected="true"
+				{% endif %}>
+					{{ lgs.lang }}
+			</option>
+		{% endfor %}
+	</select>
+
+{% else %}
+	<div class="min-w-max w-full table-auto">
+		pas de langue
+	</div>
+{% endif %}

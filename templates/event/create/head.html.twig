@@ -1,0 +1,28 @@
+{# event/create/head.html.twig #}
+<div class="flex w-full mt-3">
+    <div class="flex-none w-80 h-16"></div>
+
+    <div class="flex-grow flex-col flex-1 justify-start">
+        <div class="flex flex-col">
+            <label class="block mb-3 pt-0">
+                <span for="title" class="flex text-gray-700 font-bold pl-3">
+                    Titre de la vidéo:
+                </span>
+                <input type="text" name="title" placeholder="Titre de la vidéo" required="required" 
+                    class="flex border-2 font-mono pl-3 text-sm font-bold py-3 rounded placeholder-white text-white bg-blue-500 border-blue-500 focus:ring w-full" />
+            </label>
+        </div>
+
+        <div class="flex flex-col">
+            <label class="block mb-3 pt-0">
+                <span for="subtitle" class="flex text-gray-700 font-bold pl-3">
+                    Sous-titre:
+                </span>
+                <input name='subtitle' placeholder="Sous-titre:" type="text" 
+                    class="flex border-2 font-mono pl-3 font-bold py-3 rounded text-sm bg-blue-500 placeholder-white text-white border-blue-500 focus:ring w-full" />
+            </label>
+        </div>
+    </div>
+
+    <div class="flex-none w-96 h-16"></div>
+</div> 

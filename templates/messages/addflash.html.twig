@@ -1,0 +1,113 @@
+{# event/message.html.twig #}
+{% for message in app.flashes('info') %}
+    <div id="info" class="info relative bg-blue-100 rounded-lg p-4 mb-4 text-sm text-blue-700 dark:bg-blue-200 dark:text-blue-800" role="info">
+      <span class="font-bold">
+        Info!
+      </span>
+      <span class="block sm:inline">
+        {{ message }}
+      </span>
+      <span class="close-flashmsg absolute top-0 bottom-0 right-0 px-4 py-3" data-flash-msg="{{ 'info'|json_encode|e('html_attr') }}">
+        <svg class="fill-current h-6 w-6 text-gray-500" role="button" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+          <title>Close</title>
+          <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+        </svg>
+      </span>
+    </div>
+  {% endfor %}
+  
+  {% for message in app.flashes('danger') %}
+    <div id="danger" class="danger relative bg-red-100 rounded-lg p-4 mb-4 text-sm text-red-700 dark:bg-red-200 dark:text-red-800" role="danger">
+      <span class="font-bold">
+        Danger!
+      </span>
+      <span class="block sm:inline">
+        {{ message }}
+      </span>
+      <span class="close-flashmsg absolute top-0 bottom-0 right-0 px-4 py-3" data-flash-msg="{{ 'danger'|json_encode|e('html_attr') }}">
+        <svg class="fill-current h-6 w-6 text-gray-500" role="button" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+          <title>Close</title>
+          <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+        </svg>
+      </span>
+    </div>
+  {% endfor %}
+  
+  {% for message in app.flashes('success') %}
+    <div id="success" class="success relative bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700 dark:bg-green-200 dark:text-green-800" role="success">
+      <span class="font-bold">
+        Success!
+      </span>
+      <span class="block sm:inline">
+        {{ message }}
+      </span>
+      <span class="close-flashmsg absolute top-0 bottom-0 right-0 px-4 py-3" data-flash-msg="{{ 'success'|json_encode|e('html_attr') }}">
+        <svg class="fill-current h-6 w-6 text-gray-500" role="button" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+          <title>Close</title>
+          <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+        </svg>
+      </span>
+    </div>
+  {% endfor %}
+  
+  {% for message in app.session.flashBag.peek('warning') %}
+    <div id="warning" class="warning relative bg-yellow-100 rounded-lg p-4 mb-4 text-sm text-yellow-700 dark:bg-yellow-200 dark:text-yellow-800" role="warning">
+      <span class="font-bold">
+        Warning!
+      </span>
+      <span class="block sm:inline">
+        {{ message }}
+      </span>
+      <span class="close-flashmsg absolute top-0 bottom-0 right-0 px-4 py-3" data-flash-msg="{{ 'warning'|json_encode|e('html_attr') }}">
+        <svg class="fill-current h-6 w-6 text-gray-500" role="button" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+          <title>Close</title>
+          <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+        </svg>
+      </span>
+    </div>
+  {% endfor %}
+  
+  {% for message in app.flashes('alert') %}
+    <div id="alert" class="alert relative bg-gray-100 rounded-lg p-4 mb-4 text-sm text-gray-700 dark:bg-gray-700 dark:text-gray-300" role="alert">
+      <span class="font-bold">
+        alert!
+      </span>
+      <span class="block sm:inline">
+        {{ message }}
+      </span>
+      <span class="close-flashmsg absolute top-0 bottom-0 right-0 px-4 py-3" data-flash-msg="{{ alert|json_encode|e('html_attr') }}">
+        <svg class="fill-current h-6 w-6 text-gray-500" role="button" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+          <title>Close</title>
+          <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+        </svg>
+      </span>
+    </div>
+  {% endfor %}
+  
+  {% block javascripts %}
+    <script type="text/javascript">
+          document.addEventListener("DOMContentLoaded", function () { 
+  
+            $('.close-flashmsg').on('click', function(event){
+              event.stopPropagation();
+                var closeFlashMsg = $('.close-flashmsg').data('flashMsg');
+                console.log(closeFlashMsg);
+                $.ajax({
+                  type: "POST",
+                  url: "{{ path('flash_clear') }}",
+                  data: {flashType: closeFlashMsg},
+                  dataType: 'json',
+                  timeout: 120000, // 2 Minutes
+                  /*success: function () {
+                    console.log('success');
+                  }*/
+                }).done(function( msg ) {
+                console.log(msg);
+                  $( "#"+msg ).fadeOut( "slow" );
+              });
+            }); 
+  
+      });
+      </script>
+  {% endblock %}
+  

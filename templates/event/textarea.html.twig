@@ -1,0 +1,8 @@
+{# refont/textarea.html.twig #}
+
+<label for="{{name}}" class="block text-xl font-medium text-gray-900 ">{{title}}
+    <span for={{name}} class="text-sm" style="float: right"> {{maxlenght}}</span>
+</label>
+
+<textarea required id="{{name}}" name="{{ name }}" placeholder="{{ title }}" maxlenght="{{maxlenght}}" rows="6" class="textarea bg-gray-50 text-sm rounded-lg focus:border-blue-500 w-full p-2.5 overflow-y-auto">
+</textarea>

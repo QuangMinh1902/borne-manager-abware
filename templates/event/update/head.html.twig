@@ -1,0 +1,43 @@
+{# event/update/head.html.twig #}
+    <div class="flex w-full mt-3">
+        <div class="flex-none w-80 h-16"></div>
+
+        <div class="flex-grow flex-col flex-1 justify-start">
+            <div class="flex flex-col">
+                <label class="block mb-3 pt-0">
+                    <span class="flex justify-between">
+                        <span for="title" class="flex text-gray-700 font-bold pl-3">
+                            Titre de la vidéo:
+                        </span>
+
+                        <span id="title" class="flex normal-case text-gray-400 italic text-sm mr-2">35</span>
+                    </span>
+                
+                    <input type="text" name="title" placeholder="Titre de la vidéo" 
+                        value="{{ clist.title ? clist.title : '' }}" 
+                        required="required" maxlenght="35"
+                        onKeyPress='countChar(this, 35)' onKeyUp='countChar(this, 35)' 
+						class="flex border-2 font-mono pl-3 text-sm font-bold py-3 rounded placeholder-white text-white bg-blue-500 border-blue-500 focus:ring w-full" />
+                </label>
+            </div>
+
+            <div class="flex flex-col">
+                <label class="block mb-3 pt-0">
+                    <span class="flex justify-between">
+                        <span for="subtitle" class="flex text-gray-700 font-bold pl-3">
+                            Sous-titre:
+                        </span>
+
+                        <span id="subtitle" class="flex normal-case text-gray-400 italic text-sm mr-2">60</span>
+                    </span>
+
+                    <input name='subtitle' placeholder="Sous-titre:" type="text" 
+                        value="{{ clist.subtitle ? clist.subtitle : '' }}" maxlenght="60" 
+                        onKeyPress='countChar(this, 60)' onKeyUp='countChar(this, 60)'  
+						class="flex border-2 font-mono pl-3 font-bold py-3 rounded text-sm bg-blue-500 placeholder-white text-white border-blue-500 focus:ring w-full" />
+                </label>
+            </div>
+        </div>
+
+        <div class="flex-none w-96 h-16"></div>
+    </div> 

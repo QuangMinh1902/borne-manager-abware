@@ -1,0 +1,93 @@
+{# catalog/listcatalog.html.twig #}
+{% if catalogs is not empty %}
+	<table id="data" class="tcatalog">
+		<thead class="border-b">
+			<tr class="bg-gray-200 text-gray-600 uppercase text-base leading-normal">
+				<th class="py-3 px-6 text-left">
+					Id
+				</th>
+				<th class="py-3 px-6 text-left">
+					Titre
+				</th>
+				<th class="py-3 px-6 text-center">
+					Rubrique
+				</th>
+				<th class="py-3 px-6 text-center">
+					Début Diffusion
+				</th>
+				<th class="py-3 px-6 text-center">
+					Fin Diffusion
+				</th>
+				<th class="py-3 px-6 text-center">
+					Langue
+				</th>
+				<th class="py-3 px-6 text-center">
+					Actions
+				</th>
+			</tr>
+		</thead>
+		<tbody id="tbody-catalist" class="catalog-list text-gray-600" data-catalog-list="{{ catalogs|json_encode|e('html_attr') }}">
+			{% for cat in catalogs %}
+				{% if loop.index is even %}
+					<tr class="cataloglist text-base border-b bg-[#d2eff4]">
+					{% else %}
+						<tr class="cataloglist text-base border-b">
+						{% endif %}
+						<td class="idCatalog py-3 px-6 text-left whitespace-nowrap">
+							<div class="idCatalog flex items-center">
+								{{ cat.idCatalog }}
+							</div>
+						</td>
+						<td class="title py-3 px-6 text-left">
+							<div class="title flex items-center">
+								{{ cat.title }}
+							</div>
+						</td>
+						<td class="py-3 px-6 text-center">
+							<div class="flex items-center justify-center">
+								{{ cat.category }}
+							</div>
+						</td>
+						<td class="py-3 px-6 text-center">
+							<div class="flex items-center justify-center">
+								{{ cat.startDate|date("Y-m-d") }}
+							</div>
+						</td>
+						<td classcat="py-3 px-6 text-center">
+							<div class="flex items-center justify-center">
+								{{ cat.endDate|date("Y-m-d") }}
+							</div>
+						</td>
+						<td classcat="py-3 px-6 text-center">
+							<div class="flex items-center justify-center">
+								{% include 'lang/flag.html.twig' %}
+							</div>
+						</td>
+						<td class="py-3 px-6 text-center">
+							<div class="flex item-center justify-center">
+								<a href="{{ path('catalog_view', {'idCatalog': cat.idCatalog, 'idLang': idLang}) }}" title="view">
+									<i class="fa-sharp fa-solid fa-eye fa-lg" style="color: #065df4;"></i>
+								</a>
+								{% if is_granted("ROLE_ADMIN") %}
+									<a href="{{ path('edit_event', {'idCatalog': cat.idCatalog, 'idLang': idLang}) }}" title="edit">
+										<i class="fa-sharp fa-solid fa-pen-to-square fa-lg cursor-pointer ml-10" style="color: #5a8ce2;"></i>
+									</a>
+									<a href="{{ path('catalog_delete', {'id': cat.idCatalog} ) }}" onclick="return confirm('are u sure to delete? ')" title="remove">
+										<i class="fa-solid fa-trash-can fa-lg cursor-pointer ml-10" style="color: #de2121;"></i>
+									</a>
+								{% endif %}
+							</div>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</tbody>
+	</table>
+	<div class="text-center	mt-10">
+		{{ knp_pagination_render(catalogs) }}
+	</div>
+{% else %}
+	<div class="min-w-max w-full table-auto">
+		Pas de Catalogues enregistrés
+	</div>
+{% endif %}

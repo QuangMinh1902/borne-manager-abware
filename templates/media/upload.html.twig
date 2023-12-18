@@ -1,0 +1,57 @@
+{# media/upload.html.twig #}
+<div class="bg-white relative z-0 flex-1/6"> 
+    <img id="{{ upload }}" class="events-img absolute h-full object-cover" /> 
+    <label id="{{ label }}" class="ulpload w-32 flex flex-col items-center py-6 tracking-wide uppercase cursor-pointer rounded-md shadow-md hover:bg-blue-500 hover:text-white text-blue-500 relative">
+        <i class="fas fa-cloud-upload-alt fa-3x"></i>
+        <span for="{{ upload }}" class="mt-2 text-base leading-normal"> 
+            {{ upload }}
+        </span>
+        <input type="file" id="{{ input }}" value="300000"  class="hidden" name="{{ upload }}"/> 
+        <input type="text" value="{{ img }}"  class="hidden" name="{{ upload }}"/> 
+    </label>
+</div>
+
+<script type="text/javascript">
+    // PLS - Show Image on upload
+    document.getElementById("{{ input }}").onchange = function () {
+        var reader = new FileReader();  
+        reader.onload = function (e) { 
+            // get loaded data and render thumbnail.
+            document.getElementById("{{ upload }}").src = e.target.result; 
+
+           // change class on upload image;
+           document.getElementById("{{ label }}").classList.remove('hover:bg-blue-500', "text-blue-500");
+           document.getElementById("{{ label }}").classList.add('hover:bg-green-500', "text-green-500");
+        };
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+    };
+
+    // PLS - Show Image on load page
+	document.addEventListener("DOMContentLoaded", function () {
+        var imgpath = '{{ imgpath }}';
+        var img = '{{ img }}'; 
+
+        if(imgpath){
+            var _img = document.getElementById("{{ upload }}");
+            const _imgId = _img.id;
+
+            var newImg = new Image;
+            newImg.onload = function() {
+                _img.src = this.src;
+                // change class on upload image;
+                document.getElementById("{{ label }}").classList.remove('hover:bg-blue-500', "text-blue-500");
+                document.getElementById("{{ label }}").classList.add('hover:bg-green-500', "text-green-500");
+            }
+
+            newImg.src = imgpath ? imgpath : '{{ imgpath }}'; 
+
+            if(_imgId === "video" && img){
+                _img.src = "/assets/imgs/video_event.jpg";
+                document.getElementById("{{ label }}").classList.remove('hover:bg-blue-500', "text-blue-500");
+                document.getElementById("{{ label }}").classList.add('hover:bg-green-500', "text-green-500"); 
+            }
+            // newImg.src = imgpath ;
+        }
+    });
+</script>
